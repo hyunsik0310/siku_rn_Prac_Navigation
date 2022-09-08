@@ -19,8 +19,10 @@ const items = [
   { _id: 3, name: 'React Hanbit' },
 ];
 
-const List = () => {
-  const _onPress = (item) => {};
+const List = ({ navigation }) => {
+  const _onPress = (item) => {
+    navigation.navigate('Item', { id: item._id, name: item.name });
+  };
 
   return (
     <Container>
@@ -30,7 +32,7 @@ const List = () => {
         <Button
           key={item._id}
           title={item.name}
-          onPress={() => _onPress(itme)}
+          onPress={() => _onPress(item)}
         />
       ))}
     </Container>

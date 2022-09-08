@@ -8,7 +8,8 @@ const Stack = createStackNavigator();
 
 const StackNavigation = () => {
   return (
-    <Stack.Navigator>
+    //initialRouteName로 초기화면을 제어
+    <Stack.Navigator initialRouteName='Home'>
       <Stack.Screen name='Home' component={Home}></Stack.Screen>
       <Stack.Screen name='List' component={List}></Stack.Screen>
       <Stack.Screen name='Item' component={Item}></Stack.Screen>
