@@ -28,7 +28,11 @@ const StackNavigation = () => {
         ),
       }}
     >
-      <Stack.Screen name='Home' component={Home}></Stack.Screen>
+      <Stack.Screen
+        name='Home'
+        component={Home}
+        options={{ headerShown: false }}
+      ></Stack.Screen>
       <Stack.Screen
         name='List'
         component={List}
